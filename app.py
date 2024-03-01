@@ -4,12 +4,15 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
 from langchain.chains.question_answering import load_qa_chain
-
+from dotenv import load_dotenv
 import os
 import openai
 
-os.environ["OPENAI_API_KEY"] = "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"
-openai.api_key = "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"
+dotenv_path = os.path.join(".env")
+load_dotenv(dotenv_path)
+print(dotenv_path)
+
+os.getenv("OPENAI_API_KEY")
 
 def blog(query):
     prompt=f"go through all the doccument give the corrected answer : {query}"
