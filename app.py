@@ -8,9 +8,6 @@ from langchain.chains.question_answering import load_qa_chain
 import os
 import openai
 
-os.environ["OPENAI_API_KEY"] = "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"
-openai.api_key = "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"
-
 def blog(query):
     prompt=f"go through all the doccument give the corrected answer : {query}"
     openai = ChatOpenAI(model_name="gpt-4",temperature=0.7,max_tokens=4000) # 'ada' 'gpt-3.5-turbo' 'gpt-4'
