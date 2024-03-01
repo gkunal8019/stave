@@ -8,12 +8,15 @@ from dotenv import load_dotenv
 import os
 import openai
 
+<<<<<<< HEAD
 dotenv_path = os.path.join(".env")
 load_dotenv(dotenv_path)
 print(dotenv_path)
 
 os.getenv("OPENAI_API_KEY")
 
+=======
+>>>>>>> 711afa23900b3504673ad86c97cf9486c1e4ba27
 def blog(query):
     prompt=f"go through all the doccument give the corrected answer : {query}"
     openai = ChatOpenAI(model_name="gpt-4",temperature=0.7,max_tokens=4000) # 'ada' 'gpt-3.5-turbo' 'gpt-4'
